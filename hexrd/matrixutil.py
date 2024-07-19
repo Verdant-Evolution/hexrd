@@ -68,9 +68,9 @@ def rowNorm(a):
     """
     normalize array of row vectors (vstacked, axis = 1)
     """
-    if len(a.shape) > 2:
+    if len(a.shape) != 2:
         raise RuntimeError(
-            "incorrect shape: arg must be 1-d or 2-d, yours is %d"
+            "incorrect shape: arg must be 2-d, yours is %d"
             % (len(a.shape))
         )
 
